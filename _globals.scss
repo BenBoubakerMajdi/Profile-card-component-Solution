@@ -1,0 +1,130 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100vh;
+    width: 100%;
+}
+
+body{
+    background: $Dark_cyan;
+    background-image: url(./images/bg-pattern-top.svg) ,url(./images/bg-pattern-bottom.svg) ;
+    background-position: left -280px top -450px,bottom -600px right -250px;
+    background-repeat: no-repeat,no-repeat;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 24.313rem;
+    height: 26rem;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+}
+.header{
+    position: relative;
+    background-image: url(./images/bg-pattern-card.svg);
+    background-position: center;
+    background-size: cover;
+    height: 9.75rem;
+
+    &::before{
+        content: '';
+        position: absolute;
+        position: absolute;
+        left: 50%;
+        bottom: -3.35rem;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        height: 6.7rem;
+        width: 6.7rem;
+        border-radius: 50%;
+        background: white;
+        z-index: 1;
+    }
+
+    img{
+        position: absolute;
+        left: 50%;
+        bottom: -3rem;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+
+        border-radius: 50%;
+        z-index: 2;
+        
+    }
+    
+}
+.white_area{
+    background: white;
+}
+h1{
+    font-size: 1.2rem;
+    color: $Very_dark_desaturated_blue;
+}
+p{
+    color:$Dark_grayish_blue;  
+    font-weight: $regular;
+}
+.person{
+    padding: 5.313rem 0 1.8rem 0;
+    text-align: center;
+    h1{
+        font-weight: $bold;
+    }
+    span{
+        color:$Dark_grayish_blue;
+        font-weight: $regular;
+        padding-left: 0.75rem;
+        
+    }
+    p{
+        padding-top: 0.5rem;
+        font-size: 1rem;
+    }
+}
+.stats{
+    padding: 0 1.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 6rem;
+    border-top: 1px solid hsla(0, 0%, 59%,0.3);
+    h1{
+        padding-bottom: 0.2rem;
+        text-align: center;
+        font-weight:$bold;
+    }
+    p{
+        font-size: 0.6rem;
+        text-align: center;
+        letter-spacing: 0.1rem;
+    }
+}
+
+@media(max-width:425px){
+    body{
+        background-position: left -735px top 331%,bottom -549px right -721px;
+    }
+
+    .card{
+        width: 20.438rem;
+        height: auto;
+
+    }
+    .person{
+        padding-top: 4.813rem;
+        padding-bottom: 1.688rem;
+
+    }
+}
